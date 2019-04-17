@@ -2,12 +2,17 @@
 <html>
 <script src="./js/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs=' debugUIEnabled: false;' vr-mode-ui="enabled: false">
-      <a-marker preset='custom' type='pattern' url='./markers/mjv.patt'>
-          <a-box position='0 0.5 0' material='color: yellow;'></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs=' debugUIEnabled: false;' vr-mode-ui="enabled: false">
+    <a-marker preset='custom' type='pattern' url='./markers/mjv.patt'>
+      <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
+      <a-entity position='0 0.5 0' obj-model='obj: url(./3D/BeijingLow.obj)'>
+        <!-- mtl: url(/path/to/nameOfFile.mtl) -->
+      </a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
 </html>
